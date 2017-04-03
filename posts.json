@@ -1,0 +1,29 @@
+{ "posts": [{
+    "author": "technut9000",
+    "title": "4D Printers",
+    "content": "The best new printers are no longer 3D, they're 4D!!!!!!! Next gen printification.",
+    "date": "2017-04-01",
+    "subjects": "computers, technology, printing, future",
+    "image": "./src/assets/4dprinting.jpg"
+  }, {
+    "author": "the-smartest-nerd",
+    "title": "Android is the best",
+    "content": "According to sources, it is the top browsing platform.",
+    "date": "2017-03-03",
+    "subjects": "technology, computers, phones, android",
+    "image": "./src/assets/android.jpg"
+  }, {
+    "author": "crazy-movies",
+    "title": "Kong: Skull Island will CHANGE YOUR LIFE",
+    "content": "It is literally the best movie in the history of movies. Trust me. It totally redefined my relationship with my parents.",
+    "date": "2017-01-10",
+    "subjects": "movies, box office, kong, king kong, entertainment",
+    "image": "./src/assets/kongskullisland.jpg"
+  }, {
+    "author": "all-games-all-night",
+    "title": "Legacy is the hot new thing",
+    "content": "Legacy is a game guys that is going to be cool because it's made by a cool guy who does cool things so you know, by transference, it's gonna be cool.",
+    "date": "2017-02-02",
+    "subjects": "video games, gaming, entertainment, technology, legacy",
+    "image": "./src/assets/legacy.jpg"
+  }]}
