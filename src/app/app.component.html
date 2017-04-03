@@ -1,6 +1,20 @@
-<h1 class="bg-success">
-  {{title}}
-</h1>
-<a class="navbar-brand" routerLink="">Home</a>&nbsp;&nbsp;<a class="navbar-brand" routerLink="about">About</a>
-
-<router-outlet></router-outlet>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://codingthesmartway.com">CodingTheSmartWay.com</a>
+      </div>
+      <div *ngIf="isLoggedIn">
+        <p class="navbar-text navbar-right">Logged In: {{user_displayName}} ({{user_email}})<p>
+      </div>
+      <div *ngIf="!isLoggedIn">
+        <p class="navbar-text navbar-right">Logged Out</p>
+      </div>
+    </div>
+  </nav>
+  <div class="pages">
+    <h1 class="bg-success">
+      {{title}}
+    </h1>
+    <a class="navbar-brand" routerLink="">Home</a>&nbsp;&nbsp;<a class="navbar-brand" routerLink="about">About</a>&nbsp;&nbsp;<a class="navbar-brand" routerLink="login">Log In</a>
+    <router-outlet></router-outlet>
+  </div>

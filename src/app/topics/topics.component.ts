@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { PostService } from '../post.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../providers/auth.service';
 
 @Component({
   selector: 'app-topics',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class TopicsComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
-  constructor(private postService: PostService, private router: Router) { }
+  constructor(private postService: PostService, private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
     this.posts = this.postService.getPosts();
@@ -31,5 +32,9 @@ export class TopicsComponent implements OnInit {
     this.postService.addPost(newPost);
   }
 
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['login']);
+  }
 
 }

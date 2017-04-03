@@ -11,6 +11,8 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AddPostComponent } from './add-post/add-post.component';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './providers/auth.service';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +27,8 @@ export const firebaseConfig = {
     AboutComponent,
     TopicsComponent,
     PostDetailComponent,
-    AddPostComponent
+    AddPostComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ export const firebaseConfig = {
     routing,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
