@@ -27,5 +27,9 @@ export class TopicsComponent implements OnInit {
     }
   }
 
+  submitPost(newPost) {
+    this.postService.addPost(newPost);
+  }
+
 
 }

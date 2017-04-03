@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Post } from './post.model';
 
 @Injectable()
 export class PostService {
@@ -19,5 +20,9 @@ export class PostService {
 
   deletePost(post) {
     this.getPostById(post.$key).remove();
+  }
+
+  addPost(post: Post) {
+    this.posts.push(post);
   }
 }

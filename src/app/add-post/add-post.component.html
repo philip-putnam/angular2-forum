@@ -1,0 +1,30 @@
+<button class="btn btn-info" (click)="showAddForm()">Create a Post</button>
+<br><br>
+<div *ngIf="addFormShown">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input #newTitle type="text">
+  </div>
+  <div class="form-group">
+    <label for="author">Author:</label>
+    <input #newAuthor type="text">
+  </div>
+  <div class="form-group">
+    <label for="content">Content:</label>
+    <input #newContent type="text">
+  </div>
+  <div class="form-group">
+    <label for="subjects">Subjects:</label>
+    <input #newSubjects type="text">
+  </div>
+  <div class="form-group">
+    <label for="image">Image Location:</label>
+    <input #newImage type="text">
+  </div>
+  <div class="form-group">
+    <label for="date">Date:</label>
+    <input #newDate type="date">
+  </div>
+  <button (click)="addButtonClicked(newTitle.value, newAuthor.value, newContent.value, newSubjects.value, newImage.value, newDate.value)" class="btn btn-success">Submit!</button>
+  <button (click)="cancelPostAdd()" class="btn btn-warning">Cancel</button>
+</div>
