@@ -23,8 +23,12 @@ export class AppComponent {
           this.router.navigate(['login']);
         } else {
           this.isLoggedIn = true;
-          this.user_displayName = auth.google.displayName;
-          this.user_email = auth.google.email;
+          if (auth.google.displayName != undefined) {
+            this.user_displayName = auth.google.displayName;
+            this.user_email = auth.google.email;
+          } else {
+            this.user_displayName = auth.github.displayName;
+          }
           console.log("logged in");
           console.log(auth);
           this.router.navigate(['']);

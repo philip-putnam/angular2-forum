@@ -34,6 +34,7 @@ export class TopicsComponent implements OnInit {
 
   logout() {
     this.authService.logout();
+    console.log(this);
     this.router.navigate(['login']);
   }
 

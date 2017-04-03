@@ -20,4 +20,10 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  loginGithub() {
+    this.authService.loginWithGithub().then((data) => {
+      this.router.navigate(['']);
+    })
+  }
+
 }

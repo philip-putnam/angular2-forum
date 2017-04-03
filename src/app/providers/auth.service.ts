@@ -16,4 +16,11 @@ export class AuthService {
   logout() {
     return this.af.auth.logout();
   }
+
+  loginWithGithub() {
+    return this.af.auth.login({
+      provider: AuthProviders.Github,
+      method: AuthMethods.Popup
+    })
+  }
 }
