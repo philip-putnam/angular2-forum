@@ -21,5 +21,11 @@ export class TopicsComponent implements OnInit {
     this.router.navigate(['posts', clickedPost.$key]);
   }
 
+  beginDeletingPost(post) {
+    if (confirm('Are you sure you want to delete this post?')) {
+      this.postService.deletePost(post);
+    }
+  }
+
 
 }

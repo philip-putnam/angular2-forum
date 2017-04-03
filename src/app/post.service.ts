@@ -16,4 +16,8 @@ export class PostService {
   getPostById(postId: string) {
     return this.angularFire.database.object('/posts/' + postId);
   }
+
+  deletePost(post) {
+    this.getPostById(post.$key).remove();
+  }
 }
