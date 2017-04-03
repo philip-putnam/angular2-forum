@@ -9,6 +9,7 @@ import { TopicsComponent } from './topics/topics.component';
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AboutComponent,
-    TopicsComponent
+    TopicsComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

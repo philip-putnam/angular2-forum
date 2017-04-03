@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { PostService } from '../post.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topics',
@@ -10,12 +11,15 @@ import { PostService } from '../post.service';
 })
 export class TopicsComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private router: Router) { }
 
   ngOnInit() {
     this.posts = this.postService.getPosts();
   }
 
+  goToDetailPage(clickedPost) {
+    this.router.navigate(['posts', clickedPost.$key]);
+  }
 
 
 }
