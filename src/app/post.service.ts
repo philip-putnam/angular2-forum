@@ -12,4 +12,8 @@ export class PostService {
   getPosts() {
     return this.posts;
   }
+
+  getPostById(postId: string) {
+    return this.angularFire.database.object('/posts/' + postId);
+  }
 }
